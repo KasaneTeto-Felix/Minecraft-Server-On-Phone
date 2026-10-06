@@ -29,80 +29,84 @@ cd Minecraft-Server-On-Phone
 
 Make the script executable:
 
+```bash
 chmod +x setup.sh
+```
 
 Run it:
 
+```bash
 ./setup.sh
+```
 
 The script will automatically:
 
 Install required packages
-
 Install OpenJDK 25 if needed
-
 Detect the Java 25 binary
-
 Download Paper
-
 Download Geyser
-
 Download Floodgate
-
 Configure the server
-
 Create a server launcher
-
 Avoid downloading files that already exist
 
-
 Start the Server
-
 After setup:
 
+```bash
 bash ~/mc-server/start-server.sh
+```
 
 The launcher explicitly uses Java 25, so the system java command can still point to another Java version.
 
+```bash
 Ports
 
 Edition	Port	Protocol
 
 Java	25565	TCP
 Bedrock	19132	UDP
-
+```
 
 For Bedrock players on the same network, connect using the Android device's local IP and port 19132.
 
 Example:
 
+```bash
 Address: 192.168.x.x
 Port: 19132
+```
 
 Server Settings
-
 The default performance settings are:
 
+```bash
 view-distance=5
 simulation-distance=4
+```
 
 The server launcher uses:
 
+```bash
 -Xms768M
 -Xmx950M
+```
 
 Adjust these values depending on the device.
 
 Java 25
 
 The script does not modify the default Java version in Termux.
-
 Even if:
 
+```bash
 java --version
+```
 
 returns Java 21, the server launcher will locate and use Java 25 directly.
 
-License
-
+License:
+```bash
 MIT
+```
